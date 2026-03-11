@@ -41,5 +41,5 @@ jobs:
       - name: Run API test
         run: |
           npm install -g newman
-          newman run "https://api.getpostman.com/collections/$COLLECTION_ID?apikey=$POSTMAN_API_KEY" \
-          -e "https://api.getpostman.com/environments/$ENV_ID?apikey=$POSTMAN_API_KEY"
+          newman run "https://api.getpostman.com/collections/${{secrets.COLLECTION_ID}}?apikey=${{secrets.POSTMAN_API_KEY}}" \
+          -e "https://api.getpostman.com/environments/${{secrets.ENV_ID}}?apikey=${{secrets.POSTMAN_API_KEY}}"
