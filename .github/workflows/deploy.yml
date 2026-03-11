@@ -34,6 +34,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      - name: Debug
+        run: echo $POSTMAN_API_KEY
+        
       - name: Run API test
         run: |
           npm install -g newman
